@@ -271,7 +271,13 @@ body {
   font-size: 14px;
   white-space: nowrap;
 }
-
+.no-items {
+  text-align: center;
+  color: #717582;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 20px;
+}
 @media (max-width: 540px) {
   body {
     padding: 16px 12px 32px;

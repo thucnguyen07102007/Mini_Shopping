@@ -1,44 +1,37 @@
 <!doctype html>
 <html lang="vi">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MiniShopping — Danh sách mua sắm</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
   <div class="site-header">
     <div class="brand" aria-label="MiniShopping — Trang chủ">
       <div>MiniShopping</div>
     </div>
-    <div class="main-nav" aria-label="Điều hướng chính">
-      <button type="button" class="active">Danh sách</button>
-      <button type="button">Đã xong</button>
-      <button type="button">Hướng dẫn</button>
+    <div id="main-nav" class="main-nav" aria-label="Điều hướng chính">
+      <button id="tab-list" type="button" class="active">Danh sách</button>
+      <button id="tab-done" type="button">Đã xong</button>
+      <button id="tab-guide" type="button">Hướng dẫn</button>
     </div>
   </div>
-
-  <div class="shopping-app">
+  <div id="shopping-app" class="shopping-app">
     <div class="page-header">
-      <div class="page-title">Danh sách mua sắm</div>
-      <div class="page-description">Theo dõi những món bạn cần mua.</div>
+      <div id="page-title" class="page-title">Danh sách mua sắm</div>
+      <div id="page-description" class="page-description">Theo dõi những món bạn cần mua.</div>
     </div>
-
-    <div class="add-form" aria-label="Thêm món cần mua">
-      <input type="text" class="form-input" placeholder="Nhập tên món" aria-label="Tên món" required />
-      <input type="number" class="form-input" placeholder="Giá dự kiến" aria-label="Giá dự kiến" min="0" step="1" required />
+    <div id="add-form" class="add-form" aria-label="Thêm món cần mua">
+      <input id="item-name" type="text" class="form-input" placeholder="Nhập tên món" aria-label="Tên món" required />
+      <input id="item-price" type="number" class="form-input" placeholder="Giá dự kiến" aria-label="Giá dự kiến" min="0" step="1" required />
       <button type="button" id="btn-add" class="button">Thêm món</button>
     </div>
-
-    <div class="filters" aria-label="Lọc danh sách mua sắm">
-      <button type="button" class="button active">Tất cả</button>
-      <button type="button" class="button">Chưa mua</button>
-      <button type="button" class="button">Đã mua</button>
+    <div id="filters" class="filters" aria-label="Lọc danh sách mua sắm">
+      <button id="filters-all" type="button" class="button active">Tất cả</button>
+      <button id="filters-pending" type="button" class="button">Chưa mua</button>
+      <button id="filters-completed" type="button" class="button">Đã mua</button>
     </div>
-
     <div id="item-list" class="item-list" aria-label="Các món cần mua">
       <div class="item">
         <div class="item-label">
@@ -81,16 +74,15 @@
         <button type="button" class="button delete" aria-label="Xóa Bánh mì">Xóa</button>
       </div>
     </div>
-
-    <div class="summary">
+    <div id="summary" class="summary">
       <div class="remaining">
-        <div>Còn <div class="emphasis">3</div> món chưa mua</div>
+        <div>Còn <div id="remaining-count" class="emphasis">3</div> món chưa mua</div>
       </div>
-      <div>Tổng dự kiến: <div class="emphasis total">70.000 <div class="currency">đ</div>
+      <div>Tổng dự kiến: <div id="total-cost" class="emphasis total">70.000 <div class="currency">đ</div>
         </div>
       </div>
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
-
 </html>
