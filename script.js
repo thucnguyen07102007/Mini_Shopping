@@ -18,9 +18,9 @@ let items = [
   { id: 4, name: "Bánh mì", price: 20000, purchased: false },
 ];
 
-let nextId = 5;// ID tự tăng cho món mới
-let currentFilter = "all";// Trạng thái lọc hiện tại
-let currentTab = "list";// Trạng thái trang hiện tại
+let nextId = 5; // ID tự tăng cho món mới
+let currentFilter = "all"; // Trạng thái lọc hiện tại
+let currentTab = "list"; // Trạng thái trang hiện tại
 
 //Hàm hiển thị tiền theo định dạng Việt Nam
 function formatMoney(price) {
